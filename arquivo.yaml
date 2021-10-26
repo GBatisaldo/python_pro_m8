@@ -1,0 +1,12 @@
+Resources:
+  ec2LearnCf1a:
+    Properties:
+      ImageId: ami-e487179d
+      InstanceType: t2.micro
+      SubnetId: !ImportValue 'learncf-subnet-netLearnCf1a'
+      Tags:
+        - Key: Comment
+          Value: Learning CloudFormation and Troposphere
+        - Key: Name
+          Value: arquivo
+    Type: AWS::EC2::Instance
